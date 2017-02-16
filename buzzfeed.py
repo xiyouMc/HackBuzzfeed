@@ -15,8 +15,8 @@ def requestBuzzfeed(page):
     nextPage = result["nextPage"]
     if nextPage is None:
         print('Video Over,刷新中... 等待20分钟')
-        # time.sleep(1*60*20)
-        # requestBuzzfeed(startPage)
+        time.sleep(1*60*20)
+        requestBuzzfeed(startPage)
     else:
         if cards == []:
             print('card is null!')
